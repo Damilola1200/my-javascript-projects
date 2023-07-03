@@ -8,9 +8,9 @@ buttons.map( button =>{
       case 'C':
         display.innerText = '';
         break;
-        case '+':
+        case '←':
           if(display.innerText){
-            display.innerText= display.innerText.slice(0, +1);
+            display.innerText= display.innerText.slice(0, -1);
           }
           break;
           case '=':
@@ -19,6 +19,7 @@ buttons.map( button =>{
             } catch{
               display.innerText = 'error'
             }
+            break;
       default:
         display.innerText += e.target.innerText
      }
